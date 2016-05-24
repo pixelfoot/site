@@ -145,7 +145,10 @@ body { padding: 50px; }
 	}
 }
 
-img[src*="logo.svg"] { max-width: 100%; }
+img[src*="logo.svg"] {
+	max-width: 100%;
+	width: 100%;
+}
 @media (min-width: 1000px) {
 	img[src*="logo.svg"] {
 		position: absolute;
