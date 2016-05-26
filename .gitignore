@@ -73,3 +73,7 @@ sitemap.xml.gz*~
 
 # PROJECT-SPECIFIC #
 ####################
+
+files/
+uploads/
+downloads/

@@ -59,12 +59,18 @@
 			border: 0;
 			outline: 0;
 		}
+		[src="loader.gif"] {
+			width: 34px;
+			height: 34px;
+			display: block;
+			margin: 20px auto 0;
+		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<a href="http://pixelfootgames.com"><img src="logo.svg"></a>
-		<div id="presskit"></div>
+		<div id="presskit"><img src="loader.gif"></div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="tabletop1.3.4.js"></script>
@@ -96,7 +102,7 @@
 					'<li><a href="' + data[0].releaselink + '" target="_blank">' + data[0].releasename + '</a></li>',
 				'</ul>'
 			].join('\n');
-			$texthere.append(html);
+			$texthere.html(html);
 		}
 	</script>
 </body>
