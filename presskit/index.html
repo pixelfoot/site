@@ -86,6 +86,14 @@
 		});
 		function myData(data) {
 			var $texthere = $('#presskit');
+			var projects = "";
+			
+			for (var i = 0; i < data.length +1; i++) {
+				
+				projects += '<li><a href="' + data[i].releaselink + '" target="_blank">' + data[i].releasename + '</a></li>';
+				
+			}
+				
 			var html = [
 				'<h1>' + data[0].name + '</h1>',
 				'<h3>About Us</h3>',
@@ -99,7 +107,7 @@
 				'</ul>',
 				'<h3>Noteworthy Projects</h3>',
 				'<ul>',
-					'<li><a href="' + data[0].releaselink + '" target="_blank">' + data[0].releasename + '</a></li>',
+					projects,
 				'</ul>'
 			].join('\n');
 			$texthere.html(html);
