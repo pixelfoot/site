@@ -53,7 +53,8 @@
 			width: 100%;
 			margin-bottom: 10px;
 		}
-		li { margin-bottom: 10px; }
+		ul { padding-inline-start: 0; }
+		li { margin-bottom: 15px; list-style:none; padding-left:0;}
 		#presskit { margin-bottom: 50px; }
 		a img {
 			border: 0;
@@ -88,9 +89,9 @@
 			var $texthere = $('#presskit');
 			var projects = "";
 			
-			for (var i = 0; i < data.length +1; i++) {
+			for (var i = 0; i < data.length; i++) {
 				
-				projects += '<li><a href="' + data[i].releaselink + '" target="_blank">' + data[i].releasename + '</a></li>';
+				projects += '<li><a href="' + data[i].releaselink + '" target="_blank">' + data[i].releasename + '</a><br>' + data[i].releasedescription + '</li>';
 				
 			}
 				
@@ -107,7 +108,7 @@
 				'</ul>',
 				'<h3>Noteworthy Projects</h3>',
 				'<ul>',
-					projects,
+				projects,
 				'</ul>'
 			].join('\n');
 			$texthere.html(html);
